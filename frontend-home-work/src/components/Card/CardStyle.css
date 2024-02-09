@@ -1,0 +1,90 @@
+/* #card{
+    margin: 0 auto;
+}
+
+#card .-card-box {
+
+}
+#card .-card-box h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    color: #142B41;
+} */
+
+/* Card.css */
+
+#card {
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+#card .-text-topic{
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    color: #142B41;
+}
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover{
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+}
+.card {
+    width: 380px;
+    margin: 16px;
+    border-radius: 8px;
+    border: 0.1px solid #00000010;
+  }
+  
+  .card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    background-position: center;
+    margin-bottom: 16px;
+    background-size: cover;
+    border-radius: 8px 8px 0px 0px;
+  }
+  
+  .card h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #142B41;
+  }
+  
+  .card p {
+    color: #142B41;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    width: 290px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+  
+  .card button {
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    background-color:#2A4B6A;
+    padding: 8px 16px;
+    border: none;
+    gap: 30px;
+    padding: 16px;
+    border-radius: 33px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+  }
+  
+  
+  
