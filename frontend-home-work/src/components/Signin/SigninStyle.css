@@ -1,0 +1,141 @@
+#signin{
+    max-width: 100%;
+}
+
+#signin .-sign-box{
+    margin: 20px 330px;
+    box-shadow: 0px 4px 8px 4px #00000029;
+    border-radius: 20px;
+    max-width: 100%;
+    padding-bottom: 35px;
+}
+#signin .-sign-content{
+    margin: 35px;
+}
+
+#signin .-sign-image{
+    padding: 35px;
+    text-align: center;
+}
+#signin .-sign-image img{
+    border-radius: 100px;
+    border: 1px solid #021E42;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+#signin .-sign-input{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+#signin .-sign-input h1{
+    color: #255FA8;
+    font-size: 20px;
+    font-weight: 600;
+}
+#signin .-sign-item hr{
+    color: #D0D5DD;
+    background: #D9D9D9;
+    border: 1px solid #D9D9D9
+}
+
+#signin .-sign-item input{
+    width: 100%;
+    height: 44px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    font-size: 18px;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+#signin .-sign-item p{
+    font-size: 16px;
+    font-weight: 400;
+}
+#signin hr{
+    grid-column: 1/4;
+    width: 100%;
+}
+#signin h1{
+    max-width: 100%;
+    grid-column: 1/4;
+}
+
+#signin .-item7 select{
+    width: 100%;
+    height: 44px;
+    border-radius: 4px;
+    padding: 10px;
+    gap: 8px;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    font-size: 18px;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+#signin .-item8 .-phone-number{
+    display: flex;
+    gap: 1rem;
+    font-size: 18px;
+    font-weight: 400;
+}
+#signin .-item8 .-phone{
+    width: 25%;
+    gap: 1rem;
+    font-size: 18px;
+    font-weight: 400;
+    border: 1px solid #D0D5DD;
+}
+#signin .-item8 input{
+    width: 75%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#signin .-item10{
+    grid-row: 6/8;
+}
+#signin .-item10 input{
+}
+
+#signin .-sign-btn{
+    display: flex;
+    justify-content: space-between;
+}
+#signin .-sign-btn button{
+    width:160px;
+    height: 48px;
+    left: 928px;
+    border-radius: 33px;
+    box-shadow: 0px 4px 8px 4px #00000029;
+    margin: 30px;
+}
+#signin .-sign-btn .-submit{
+    background: #5FC198;
+    box-shadow: 0px 4px 8px 4px #00000029;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    color: #fff;
+    border: none;
+}
+#signin .-sign-btn .-cancel{
+    background: #021E42;
+    box-shadow: 0px 4px 8px 4px #00000029;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    color: #fff;
+    border: none;
+}
+

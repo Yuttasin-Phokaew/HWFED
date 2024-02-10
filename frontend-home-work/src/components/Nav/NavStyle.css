@@ -27,6 +27,9 @@
 #nav .-ham:hover{
     background-color: #f2f2f2;
 }
+#nav a{
+    border-radius: 100%;
+}
 #nav .-ham img{
     width: 64px;
     height: 64px;
@@ -58,7 +61,7 @@
    border: 1px solid red;
 } */
 
-#nav .-profile-box .-sing{
+#nav .-profile-box .-sign{
     width: 140px;
     height: 40px;
     font-weight: 600;
@@ -71,6 +74,6 @@
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-#nav .-profile-box .-sing:hover{
+#nav .-profile-box .-sign:hover{
     cursor: pointer;
 }

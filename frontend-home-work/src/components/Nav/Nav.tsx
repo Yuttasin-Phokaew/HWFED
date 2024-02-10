@@ -1,22 +1,16 @@
 import React from 'react'
-import './NavStyle.css'
+import './NavStyle.css';
+// import { Link } from 'react-router-dom';
 
 export default function Nav() {
-    window.addEventListener('scroll', () => {
-        const navbar = document.getElementById('navbar');
-      
-        if (window.scrollY > 0) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-      });
   return (
     <section id='nav'>
 
         <div className='-brand'>
           <div className='-ham'>
-            <img src='https://via.placeholder.com/64x64' alt='' />
+            <a href="/">
+            <img  src='https://via.placeholder.com/64x64' alt='' />
+            </a>
           </div>
         </div>
 
@@ -28,7 +22,9 @@ export default function Nav() {
 
         <div className='-profile'>
             <div className='-profile-box'>
-                    <button className='-sing'>Sing in</button>
+              <a href='/Signin'>
+                    <button className='-sign'>Sign in</button>
+              </a>
             </div>
         </div>
     </section>
