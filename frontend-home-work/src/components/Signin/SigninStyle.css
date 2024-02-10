@@ -12,18 +12,46 @@
 #signin .-sign-content{
     margin: 35px;
 }
+.-select-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 #signin .-sign-image{
     padding: 35px;
     text-align: center;
 }
 #signin .-sign-image img{
-    border-radius: 100px;
+    border-radius: 100%;
     border: 1px solid #021E42;
     width: 150px;
     height: 150px;
     cursor: pointer;
 }
+.-img-file{
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+.-img-file img{
+    background-size: cover;
+    object-fit: cover;
+}
+
+.-beforhover{
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+
 
 #signin .-sign-input{
     display: grid;
@@ -127,6 +155,7 @@
     letter-spacing: 0em;
     color: #fff;
     border: none;
+    cursor: pointer;
 }
 #signin .-sign-btn .-cancel{
     background: #021E42;
@@ -137,5 +166,6 @@
     letter-spacing: 0em;
     color: #fff;
     border: none;
+    cursor: pointer;
 }
 

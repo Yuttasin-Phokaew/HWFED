@@ -1,5 +1,6 @@
 import React from 'react'
 import './SigninStyle.css'
+import ImageUploader from './ImageUploader'
 
 export default function Signin() {
   return (
@@ -7,7 +8,8 @@ export default function Signin() {
         <div className='-sign-box'>
             <div className='-sign-content'>
                 <div className='-sign-image'>
-                    <img src='https://via.placeholder.com/64x64' alt='profile' />
+                    {/* <img src='https://via.placeholder.com/64x64' alt='profile' /> */}
+                    <ImageUploader />
                 </div>
 
                 <div className='-sign-input'>
