@@ -3,7 +3,6 @@
   .image-container {
     position: relative;
     overflow: hidden;
-    transition: 0.3s;
     z-index: 99;
     text-align: center;
   }
@@ -13,6 +12,7 @@
     border-radius: 100%;
     width: 150px;
     height: 150px;
+    filter: brightness(70%);
     cursor: pointer;
   }
   

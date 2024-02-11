@@ -1,70 +1,54 @@
+import React, { useEffect, useRef } from 'react';
 
+const YourComponent: React.FC = () => {
+  const modalRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const modalImgRef = useRef<HTMLImageElement>(null);
+  const captionTextRef = useRef<HTMLDivElement>(null);
+  const spanRef = useRef<HTMLSpanElement>(null);
 
-// ImageUploader.tsx
-import './ImageUpLoader.css'
-import './SigninStyle.css'
-import React, { useState } from 'react';
+  useEffect(() => {
+    const modal = modalRef.current;
+    const img = imgRef.current;
+    const modalImg = modalImgRef.current;
+    const captionText = captionTextRef.current;
+    const span = spanRef.current;
 
-const ImageUploader: React.FC = () => {
-  const [image, setImage] = useState<string | null>(null);
-  const [isHovered, setIsHovered] = useState(false);
-
-
-  // Function to handle image upload
-  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-
-    if (file) {
-      const reader = new FileReader();
-
-      reader.onloadend = () => {
-        const imageDataUrl = reader.result as string;
-        setImage(imageDataUrl);
+    if (img && modal && modalImg && captionText && span) {
+      img.onclick = () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
       };
 
-      reader.readAsDataURL(file);
+      span.onclick = () => {
+        modal.style.display = "none";
+      };
     }
-  };
-
-  // Function to trigger file input click
-  const handleIconClick = () => {
-    const fileInput = document.getElementById('file-input');
-    if (fileInput) {
-      fileInput.click();
-    }
-  };
-
-  // Function to handle image removal
-  const handleRemoveImage = () => {
-    setImage(null);
-  };
+  }, []); // Empty dependency array to ensure the effect runs only once
 
   return (
     <div>
-      <input type="file" accept="image/*" id="file-input" style={{ display: 'none' }} onChange={handleImageUpload}/>
-      <div className='-img-file'>
-        {/* <img src={image || 'placeholder-image-url'} alt="Uploaded" onClick={handleIconClick} role="button"/> */}
-        {/* {image && <button onClick={handleRemoveImage}>อันนี้ลบ</button>} */}
-        <div className={`image-container ${isHovered ? 'hovered' : ''}`} onClick={() => document.getElementById('file-input')?.click()} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-        <img src={image || 'placeholder-image-url'} alt="Uploaded" onClick={handleIconClick} role="button"/>
-        {image && (
-          <>
-        {/* <img src={image || 'placeholder-image-url'} alt="Uploaded" onClick={handleIconClick} role="button"/> */}
+      {/* Your image */}
+      <img
+        id="myImg"
+        src="your-image-source.jpg"
+        alt="Your Image"
+        ref={imgRef}
+      />
 
-            {/* <img src={image} alt="Uploaded" style={{ maxWidth: '100%', maxHeight: '200px' }}/> รูปซ้ำ  */}
-            {isHovered && (
-              <div className="overlay">
-                <div className="icon" onClick={() => alert('View Image')}>🖼️</div>
-                <div className="icon" onClick={handleRemoveImage}>🗑️</div>
-              </div>
-            )}
-          </>
-        )}
-      </div>
-      
+      {/* Your modal */}
+      <div className="modal" ref={modalRef}>
+        <span className="close" ref={spanRef}>&times;</span>
+        <img
+          id="img01"
+          alt="Modal Image"
+          ref={modalImgRef}
+        />
+        <div id="caption" ref={captionTextRef}></div>
       </div>
     </div>
   );
 };
 
-export default ImageUploader;
+export default YourComponent;
