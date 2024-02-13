@@ -1,11 +1,11 @@
 import React from 'react'
-import './NavStyle.css';
+import './LoginStyle.css'
 
 // import { Link } from 'react-router-dom';
 
-export default function Nav() {
+export default function Login() {
   return (
-    <section id='nav'>
+    <section id='afterlogin'>
 
         <div className='-brand'>
           <div className='-ham'>
@@ -23,7 +23,7 @@ export default function Nav() {
 
         <div className='-profile'>
             <div className='-profile-box'>
-              <a href='/register' >
+              <a href='/login' >
                     <button className='-sign'>Sign in</button>
               </a>
             </div>

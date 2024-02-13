@@ -1,16 +1,9 @@
-import MainLayout from "./layout/MainLayout"
-import { BrowserRouter } from "react-router-dom";
-import './components/Home/Home'
-import Nav from "./components/Nav/Nav";
+import { RouterProvider } from 'react-router-dom'
+
+import router from './router'
 
 function App() {
-
-  return (
-    <>
-    <Nav />
-    <MainLayout />
-    </>
-  );
+  return <RouterProvider router={router} fallbackElement={null} />
 }
 
 export default App

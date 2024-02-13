@@ -1,14 +1,21 @@
 import React from 'react'
 import './SigninStyle.css'
 import ImageUploader from './ImageUploader'
+import Nav from '../Nav/Nav'
 
 export default function Signin() {
+    const handleUpload = () => {
+          // เมื่อทำการอัปโหลดรูปภาพเสร็จสิ้น
+          setProfileImage(selectedImage);
+          // ส่วนอื่น ๆ ที่คุณต้องการทำหลังจากการอัปโหลด
+      };
   return (
+    
     <section id='signin'>
+    <Nav />
         <div className='-sign-box'>
             <div className='-sign-content'>
                 <div className='-sign-image'>
-                    {/* <img src='https://via.placeholder.com/64x64' alt='profile' /> */}
                     <ImageUploader />
                 </div>
 
@@ -86,7 +93,7 @@ export default function Signin() {
                 </div>
                 <div className='-sign-btn'>
                     <button className='-cancel'>Cancal</button>
-                    <button className='-submit'>Submit</button>
+                    <button className='-submit' onClick={handleUpload}>Submit</button>
                 </div>
             </div>
         </div>

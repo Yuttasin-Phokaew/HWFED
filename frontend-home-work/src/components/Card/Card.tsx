@@ -11,7 +11,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ imageSrc, title, description, buttonText }) => {
   return (
     
-    <div className="card">
+    <div className="-card" id='card'>
         <img src={imageSrc} alt={title} />
         <h1>{title}</h1>
         <p>{description}</p>

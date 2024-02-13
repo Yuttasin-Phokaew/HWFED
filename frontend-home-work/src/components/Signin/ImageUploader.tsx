@@ -1,8 +1,5 @@
-// ImageUploader.tsx
-
-import './ImageUpLoader.css'
 import './SigninStyle.css'
-import React, { useState , useEffect, useRef  } from 'react';
+import React, { useState  } from 'react';
 
 const ImageUploader: React.FC = () => {
   const [image, setImage] = useState<string | null>(null);
@@ -48,8 +45,6 @@ const ImageUploader: React.FC = () => {
     setIsModalOpen(false);
   };
 
-
-
   return (
     <div className='-select-img'>
       <input type="file" accept="image/*" id="file-input" style={{ display: 'none' }} onChange={handleImageUpload} />
@@ -71,13 +66,12 @@ const ImageUploader: React.FC = () => {
         )}
       </div>
 
-      {/* Modal for Viewing Image */}
-          
-          
-
           {isModalOpen && (
-        <div className="-modal" id='modal' onClick={handleCloseModal}>
+        <div className="-modal" id='modal'>
           <div className='-modal-box'>
+
+
+
 
             <span className="-close" onClick={handleCloseModal}>&times;</span>
             <img src={image} id='modalimage' alt="Viewed" className="-modal-image"/>

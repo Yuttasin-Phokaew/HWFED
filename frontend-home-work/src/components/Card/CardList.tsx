@@ -15,7 +15,7 @@ const CardList: React.FC = () => {
             <h1>Lorem ipsum</h1>
         </div>
         <div className=''>
-            <div className="app">
+            <div className="-app" id='app'>
                 {cardsData.map((card, index) => (
                 <Card key={index} imageSrc={card.imageSrc} title={card.title} description={card.description} buttonText={card.buttonText}/>
             ))}
