@@ -4,11 +4,7 @@ import ImageUploader from './ImageUploader'
 import Nav from '../Nav/Nav'
 
 export default function Signin() {
-    const handleUpload = () => {
-          // เมื่อทำการอัปโหลดรูปภาพเสร็จสิ้น
-          setProfileImage(selectedImage);
-          // ส่วนอื่น ๆ ที่คุณต้องการทำหลังจากการอัปโหลด
-      };
+   
   return (
     
     <section id='signin'>
@@ -93,7 +89,7 @@ export default function Signin() {
                 </div>
                 <div className='-sign-btn'>
                     <button className='-cancel'>Cancal</button>
-                    <button className='-submit' onClick={handleUpload}>Submit</button>
+                    <button className='-submit'>Submit</button>
                 </div>
             </div>
         </div>
