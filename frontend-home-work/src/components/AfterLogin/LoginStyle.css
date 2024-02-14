@@ -1,4 +1,4 @@
-#afterloginafterlogin{
+#afterlogin {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,13 +10,13 @@
 
 }afterloginafterlogin
 
-#afterloginafterlogin .-brand{
+#afterlogin  .-brand{
     align-items: center;
     justify-content: center;
     height: 100%;
 }
 
-#afterloginafterlogin .-ham{
+#afterlogin  .-ham{
     width: 64px;
     height: 64px;
     border-radius: 100%;
@@ -24,13 +24,13 @@
     cursor: pointer;
     background-color: #fff;
 }
-#afterloginafterlogin .-ham:hover{
+#afterlogin  .-ham:hover{
     background-color: #f2f2f2;
 }
-#afterloginafterlogin a{
+#afterlogin  a{
     border-radius: 100%;
 }
-#afterloginafterlogin .-ham img{
+#afterlogin  .-ham img{
     width: 64px;
     height: 64px;
     margin: auto;

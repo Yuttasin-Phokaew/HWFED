@@ -1,12 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { useNavigate  } from 'react-router';
 import './SigninStyle.css'
 import ImageUploader from './ImageUploader'
 import Nav from '../Nav/Nav'
 
-export default function Signin() {
-   
+// export default function Signin() {
+
+    // const loginForm = document.getElementById("file-input , email");
+    // console.log(FileReader)
+
+    // const [email, setEmail] = useState('');
+
+    // const handleEmailChange = (e) => {
+    //   setEmail(e.target.value);
+    // };
+  
+    // const handleSubmit = () => {
+    //   // ทำอะไรกับข้อมูลที่ได้รับ เช่น ส่งไปที่ API, นำไปแสดงผล, ฯลฯ
+    //   console.log('Email:', email);
+  
+    //   // ตัวอย่างการนำไปหน้าถัดไป (ให้ทำการนำไปใช้ตามที่คุณต้องการ)
+    //   // เช่น: history.push('/nextPage');
+    //   history.push('/afterlogin', { email });
+    // };
+
+    const Signin: React.FC = () => {
+        const [email, setEmail] = useState('');
+        const navigate = useNavigate ();
+      
+        const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+          setEmail(event.target.value);
+        };
+      
+        const handleSubmit = () => {
+          // ทำอะไรกับข้อมูล email ที่ได้รับ เช่น ส่งไปที่ API, นำไปแสดงผล, ฯลฯ
+          console.log('Email:', email);
+      
+          // ตัวอย่างการนำไปหน้าถัดไป (ให้ทำการนำไปใช้ตามที่คุณต้องการ)
+          // เช่น: history.push('/nextPage', { email });
+          history.push('/afterlogin', { email });
+        };
+
   return (
-    
+
     <section id='signin'>
     <Nav />
         <div className='-sign-box'>
@@ -19,8 +55,7 @@ export default function Signin() {
 
                     <div className='-sign-item -item1'>
                         <p>Email</p>
-                        {/* <FontAwesomeIcon icon="fa-solid fa-lock" /> */}
-                        <input type='' placeholder='Enter your email'/>
+                        <input type='text' id='email' placeholder='Enter your email' value={email} onChange={handleEmailChange}/>
                     </div>
                     <div className='-sign-item -item2'>
                         <p>Password</p>
@@ -89,10 +124,13 @@ export default function Signin() {
                 </div>
                 <div className='-sign-btn'>
                     <button className='-cancel'>Cancal</button>
-                    <button className='-submit'>Submit</button>
+                    <a href='/afterlogin'>
+                    <button className='-submit' type='text' onClick={handleSubmit}>Submit</button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-  )
-}
+  );
+};
+export default Signin;

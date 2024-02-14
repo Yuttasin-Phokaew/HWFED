@@ -6,10 +6,11 @@ const ImageUploader: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Function to handle image upload
+  // ฟังก์ชั่นจัดการการอัพโหลดรูปภาพ
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-
+    console.log(file)
+    
     if (file) {
       const reader = new FileReader();
 
@@ -22,7 +23,7 @@ const ImageUploader: React.FC = () => {
     }
   };
 
-  // Function to trigger file input click
+  // ฟังก์ชั่นเพื่อทริกเกอร์การคลิกอินพุตไฟล์
   const handleIconClick = () => {
     const fileInput = document.getElementById('file-input');
     if (fileInput) {

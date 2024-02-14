@@ -1,9 +1,13 @@
 import React from 'react'
+// import { useHistory } from 'react-router-dom';
+import Signin from '../Signin/Signin'
+import ImageUploader from '../Signin/ImageUploader'
 import './LoginStyle.css'
 
-// import { Link } from 'react-router-dom';
 
-export default function Login() {
+
+export default function AfterLogin() {
+  
   return (
     <section id='afterlogin'>
 
@@ -23,11 +27,21 @@ export default function Login() {
 
         <div className='-profile'>
             <div className='-profile-box'>
-              <a href='/login' >
-                    <button className='-sign'>Sign in</button>
+              <a href='#' >
+                    <div className='-profile'>
+                      <div className='-photo'>
+                          {/* <img src={image} alt='profile' /> */}
+                      </div>
+                      <div className='-icon'>
+                        
+                      </div>
+                    </div>
               </a>
             </div>
         </div>
+       
     </section>
   )
 }
+
+
